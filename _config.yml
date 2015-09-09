@@ -1,0 +1,21 @@
+# exclude some build files
+exclude: ['Gemfile*', 'Guardfile', 'scss', 'README.md', '.gitignore']
+
+# interpretter
+markdown: kramdown
+
+# basic config
+permalink: /:title
+destination: ./public
+
+# pagination
+paginate: 10
+paginate_path: "page:num"
+
+# site details
+title: 'Brisbane Gophers Meetups'
+author: 'A bunch of Gophers'
+
+# extra gems
+gems:
+  - jemoji

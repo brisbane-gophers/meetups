@@ -1,0 +1,14 @@
+---
+layout: layout
+---
+<article>
+	<section class="image">
+		<img src="/art/{{ page.feature }}" alt="{{ page.title }}">
+	</section>
+
+	<section class="details">
+		<h1><time datetime="{{ page.date }}">{{ page.title }}</time></h1>
+		{{ content }}
+		<p><a href="/psd/{{ page.download }}" class="download">download .psd</a></p>
+	</section>
+</article>

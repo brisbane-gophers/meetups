@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="{{ site.author }}" />
+        <meta name="viewport" content="width=device-width" />
+        <title>{{ site.title }}</title>
+
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/site.css">
+    </head>
+
+    <body>
+        <div id="wrap">
+            <aside>
+                <h1><a href="/">{{ site.title }}</a></h1>
+                <p>{{ site.description }}</p>   
+            </aside>
+
+            <main>
+                {{ content }}
+
+                <nav>
+                {% if paginator.previous_page %}
+                    {% if paginator.previous_page == 1 %}
+                    <a href="/" class="previous">prev</a>
+                    {% else %}
+                    <a href="/page{{ paginator.previous_page }}" class="previous">prev</a>
+                    {% endif %}
+                {% endif %}
+                
+                {% if paginator.next_page %}
+                    <a href="/page{{ paginator.next_page }}" class="next">next</a>
+                {% endif %}
+                </nav>
+            </main>
+        </div>
+
+        <script>
+        </script>
+    </body>
+</html>
